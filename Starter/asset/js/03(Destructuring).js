@@ -14,21 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
 function arrayDestructuring() {
 
     // we have an array with the name and surname
-    let arr = ["Margaery", "Tyrell"]
+    let arr = ["Margaery", "Tyrell"];
 
     //1. Destructor this array to firstName and lastName
 
+    let [firstName, lastName] = arr;
+
     //2. Display it  [Replace it with ${firstName} ${lastName} once you have the variables]
-    des_arr.innerHTML = `Hello , I am firstName lastName `
+    des_arr.innerHTML = `Hello , I am ${firstName} ${lastName}  `
 
 
     // we have an array with the name and surname
     let str = "Margaery Tyrell"
 
     //1. Destructor this string array to firstName and lastName by using split() method of string object
-
+    const string_split = str.split(" ");
+    firstName = string_split[0];
+    lastNsame = string_split[1];
     //2. Display it [Replace it with ${firstName} ${lastName} once you have the variables]
-    des_string.innerHTML = `Hello , I am firstName lastName `
+    des_string.innerHTML = `Hello , I am ${firstName} ${lastName} `
 
 
 
@@ -42,15 +46,18 @@ function objectDestructuring() {
     let person = { firstName: "John", lastName: "Smith" }
 
     //1. Destructor this object to firstName and lastName 
+    let firstName = person.firstName;
+    let lastName = person.lastName;
 
     //2. Display it [Replace it with ${firstName} ${lastName} once you have the variables]
-    des_obj1.innerHTML = `Hi , I am firstName lastName `
+    des_obj1.innerHTML = `Hi , I am ${firstName} ${lastName} `
 
 
     //1. Destructor this object to fName and sName [different naming]
-
-    //2. Display it [Replace it with ${Name} ${lName} once you have the variables]
-    des_obj2.innerHTML = `Hi , I am fName lName `
+    let fName = person.firstName;
+    let lName = person.lastName;
+    //2. Display it [Replace it with ${fName} ${lName} once you have the variables]
+    des_obj2.innerHTML = `Hi , I am ${fName} ${lName} `
 
 
 }
@@ -61,7 +68,7 @@ function spreadSyntax() {
     const arr = [1, 2, 3, 4]
 
     //1. Pass the array using spread syntax
-    const result = sum1();
+    const result = sum1(...arr);
 
     //Display it 
     spread_syntax.innerHTML = `The Sum is : ${result} `

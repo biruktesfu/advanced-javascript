@@ -45,6 +45,7 @@ function displaySymbolObject() {
 
     // 1. Create an id constant that store Symbol with id debugging string 
 
+    
     const id = Symbol(1234);
 
     //2. Add the symbol property to the object [this will be considered as hidden property]
