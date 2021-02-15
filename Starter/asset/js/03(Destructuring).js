@@ -108,11 +108,18 @@ function sum1(x1, x2, x3, x4) {
 
 
 //3. Make this function to support rest, and add 5 numbers
-function sum2(x1, x2) {
+function sum2(...input) {
+    sum =0
+    for (i of input){
+    sum += i;
+    }
+    return sum;
 
     //4. Function that add 5 numbers [Consider Adding the arr[0], arr[1], arr[2]]
 
-    return x1 + x2;
+    console.log(input[0] + input[1] + input[2] + input[3] + input[4])
 
 
 }
+
+console.log("line 119 not finished")
