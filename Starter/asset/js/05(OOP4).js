@@ -12,7 +12,7 @@ Person.prototype.getFullName = function() {
 }
 
 Person.prototype.getFullName()
-//create a customer object
+//create a customer objec
 function Customer(firstName, lastName, membership) {
 
     //3. Call the Person Object Constructor using call [Person.call(this,firsName,lastName)]
